@@ -17,6 +17,7 @@
 !site/assets/images/*.png
 !site/assets/images/*.jpg
 !site/assets/images/*.jpeg
+!site/assets/downloads/*.pdf
 
 # Environment and OS files
 .env

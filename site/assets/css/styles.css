@@ -274,6 +274,13 @@ h3 {
   max-width: 720px;
 }
 
+.freebie-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 0.62fr);
+  gap: 32px;
+  align-items: center;
+}
+
 .category-list,
 .link-panel {
   display: grid;
@@ -304,6 +311,17 @@ h3 {
 .feature-band {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(280px, 0.72fr);
+  gap: 28px;
+  align-items: center;
+  padding: clamp(32px, 5vw, 54px);
+  background: var(--mist);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+
+.resource-feature {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 0.68fr);
   gap: 28px;
   align-items: center;
   padding: clamp(32px, 5vw, 54px);
@@ -463,6 +481,79 @@ h3 {
   object-fit: cover;
 }
 
+.download-note {
+  margin-top: 14px;
+  margin-bottom: 0;
+  color: var(--ink-soft);
+  font-weight: 700;
+}
+
+.detail-grid,
+.recommendation-panel {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 0.72fr);
+  gap: 28px;
+  align-items: center;
+}
+
+.info-card,
+.notice-panel,
+.recommendation-panel {
+  padding: clamp(28px, 5vw, 46px);
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: 0 10px 28px rgba(23, 55, 47, 0.07);
+}
+
+.detail-list {
+  display: grid;
+  gap: 10px;
+  padding-left: 20px;
+  margin: 0;
+  color: var(--ink-soft);
+  font-weight: 700;
+}
+
+.notice-panel {
+  background: var(--mist);
+}
+
+.recommendation-panel {
+  background: var(--ink);
+}
+
+.recommendation-panel h2,
+.recommendation-panel h3,
+.recommendation-panel p {
+  color: var(--paper);
+}
+
+.recommendation-panel .eyebrow {
+  color: var(--gold);
+}
+
+.recommendation-panel img {
+  width: 100%;
+  border-radius: var(--radius);
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.16);
+}
+
+.recommendation-panel .button.primary {
+  color: var(--ink);
+  background: var(--gold);
+  border-color: var(--gold);
+}
+
+.recommendation-panel .button.secondary {
+  color: var(--paper);
+  border-color: var(--paper);
+}
+
+.recommendation-panel .button.secondary:hover {
+  color: var(--ink);
+}
+
 .text-link {
   display: inline-flex;
   margin-top: 8px;
@@ -616,6 +707,10 @@ h3 {
 
   .hero,
   .feature-band,
+  .resource-feature,
+  .freebie-hero,
+  .detail-grid,
+  .recommendation-panel,
   .split-story,
   .newsletter-panel {
     grid-template-columns: 1fr;
