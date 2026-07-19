@@ -1,0 +1,25 @@
+# Local product packages and generated working files
+/output/
+/tmp/
+/etsy-assets/
+/marketing-assets/
+/promo-assets/
+/tools/
+
+# Large or private product/source assets outside the public site folder
+*.zip
+*.pdf
+*.png
+*.jpg
+*.jpeg
+
+# Keep public website images deployable
+!site/assets/images/*.png
+!site/assets/images/*.jpg
+!site/assets/images/*.jpeg
+
+# Environment and OS files
+.env
+.env.*
+Thumbs.db
+.DS_Store
