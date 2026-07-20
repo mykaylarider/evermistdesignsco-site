@@ -195,6 +195,45 @@ h3 {
   margin-top: 24px;
 }
 
+.proof-row,
+.card-badge-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 18px 0 0;
+}
+
+.card-badge-row {
+  margin: 0 0 14px;
+}
+
+.proof-pill,
+.card-badge,
+.rating-badge {
+  display: inline-flex;
+  align-items: center;
+  min-height: 30px;
+  padding: 6px 10px;
+  color: var(--ink);
+  background: var(--mist);
+  border: 1px solid rgba(23, 55, 47, 0.13);
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 800;
+}
+
+.proof-pill.light {
+  color: var(--paper);
+  background: rgba(255, 255, 255, 0.14);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.card-badge,
+.rating-badge {
+  color: var(--coral);
+  background: var(--paper);
+}
+
 .button {
   display: inline-flex;
   min-height: 46px;
@@ -449,6 +488,68 @@ h3 {
   font-weight: 700;
 }
 
+.social-proof-panel {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 0.76fr);
+  gap: 28px;
+  align-items: center;
+  padding: clamp(30px, 5vw, 48px);
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: 0 10px 28px rgba(23, 55, 47, 0.07);
+}
+
+.social-proof-panel p {
+  color: var(--ink-soft);
+}
+
+.testimonial-card,
+.inline-testimonial {
+  margin: 0;
+  padding: 20px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+
+.testimonial-card blockquote,
+.inline-testimonial blockquote {
+  margin: 14px 0 12px;
+  color: var(--ink);
+  font-size: 1.08rem;
+  font-weight: 800;
+  line-height: 1.35;
+}
+
+.inline-testimonial {
+  margin: 16px 0 0;
+}
+
+.inline-testimonial blockquote {
+  font-size: 0.98rem;
+}
+
+.testimonial-card figcaption,
+.inline-testimonial figcaption {
+  color: var(--ink-soft);
+  font-size: 0.92rem;
+  font-weight: 700;
+}
+
+.mini-proof-list {
+  display: grid;
+  gap: 8px;
+  padding-left: 20px;
+  margin: 14px 0 0;
+  color: var(--ink-soft);
+  font-weight: 700;
+}
+
+.mini-proof-list.light {
+  color: var(--mist);
+}
+
 .how-it-works {
   border-top: 1px solid var(--line);
 }
@@ -473,6 +574,10 @@ h3 {
 
 .shop-card.highlight {
   grid-column: 1 / -1;
+}
+
+.shop-card.text-only {
+  grid-template-columns: 1fr;
 }
 
 .shop-card img {
@@ -729,6 +834,7 @@ h3 {
   .detail-grid,
   .recommendation-panel,
   .split-story,
+  .social-proof-panel,
   .newsletter-panel {
     grid-template-columns: 1fr;
   }
