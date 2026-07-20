@@ -65,7 +65,7 @@ document.addEventListener("click", (event) => {
     const url = new URL(rawHref, window.location.href);
 
     if (url.hostname !== window.location.hostname && /^https?:$/.test(url.protocol)) {
-      trackAnalyticsEvent("Outbound Link Click", {
+      trackAnalyticsEvent("Outbound Link: Click", {
         label,
         destination: `${url.hostname}${url.pathname}`,
       });
