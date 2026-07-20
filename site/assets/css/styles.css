@@ -596,10 +596,27 @@ h3 {
   box-shadow: var(--shadow);
 }
 
-.signup-form {
+.signup-form,
+.mailer-lite-form {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
   gap: 10px;
+}
+
+.signup-form {
+  grid-template-columns: minmax(0, 1fr) auto;
+}
+
+.mailer-lite-form {
+  width: 100%;
+  min-height: 130px;
+  padding: 18px;
+  background: var(--paper);
+  border: 2px solid var(--line);
+  border-radius: var(--radius);
+}
+
+.mailer-lite-form .ml-embedded {
+  width: 100%;
 }
 
 .signup-form input {
