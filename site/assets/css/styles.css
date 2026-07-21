@@ -629,7 +629,8 @@ h3 {
 }
 
 .detail-grid,
-.recommendation-panel {
+.recommendation-panel,
+.purchase-summary {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(280px, 0.72fr);
   gap: 28px;
@@ -637,6 +638,7 @@ h3 {
 }
 
 .info-card,
+.value-card,
 .notice-panel,
 .recommendation-panel {
   padding: clamp(28px, 5vw, 46px);
@@ -653,6 +655,30 @@ h3 {
   margin: 0;
   color: var(--ink-soft);
   font-weight: 700;
+}
+
+.price-line {
+  margin-bottom: 10px;
+  color: var(--ink);
+  font-size: 2rem;
+  line-height: 1;
+  font-weight: 800;
+}
+
+.price-line span {
+  display: inline-flex;
+  margin-left: 6px;
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.value-card .detail-list {
+  margin: 18px 0;
+}
+
+.full-width {
+  width: 100%;
 }
 
 .notice-panel {
@@ -900,6 +926,7 @@ h3 {
   .resource-feature,
   .freebie-hero,
   .detail-grid,
+  .purchase-summary,
   .recommendation-panel,
   .split-story,
   .social-proof-panel,
