@@ -108,6 +108,18 @@ input:focus-visible {
   border-radius: var(--radius);
 }
 
+.site-nav .nav-cta {
+  color: var(--paper);
+  background: var(--ink);
+  border-radius: var(--radius);
+}
+
+.site-nav .nav-cta:hover,
+.site-nav .nav-cta[aria-current="page"] {
+  color: var(--ink);
+  background: var(--gold);
+}
+
 .nav-toggle {
   display: none;
   width: 42px;

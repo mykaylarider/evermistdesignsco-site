@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mykaylarider.github.io/evermistdesignsco-site/sitemap.xml
