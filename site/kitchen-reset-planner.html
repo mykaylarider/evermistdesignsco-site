@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Create a personalized kitchen reset plan with the free EvermistDesignsCo Kitchen Reset Planner. Choose your time, focus area, and reset style.">
+    <title>Kitchen Reset Planner | EvermistDesignsCo</title>
+    <link rel="canonical" href="https://mykaylarider.github.io/evermistdesignsco-site/kitchen-reset-planner.html">
+    <meta property="og:title" content="Free Kitchen Reset Planner | EvermistDesignsCo">
+    <meta property="og:description" content="Answer a few quick questions and get a personalized kitchen reset plan for dishes, counters, pantry, refrigerator, floors, or everything.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mykaylarider.github.io/evermistdesignsco-site/kitchen-reset-planner.html">
+    <meta property="og:image" content="https://mykaylarider.github.io/evermistdesignsco-site/assets/images/free-kitchen-reset.jpg">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/kitchen-reset-planner.css">
+    <script>
+      window.plausible = window.plausible || function() {
+        (window.plausible.q = window.plausible.q || []).push(arguments);
+      };
+    </script>
+    <script defer data-domain="mykaylarider.github.io" src="https://plausible.io/js/script.js"></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="EvermistDesignsCo home">
+        <span class="brand-mark">E</span>
+        <span>EvermistDesignsCo</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="sr-only">Toggle navigation</span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="home-command-center.html">Home Command Center</a>
+        <a href="shop.html">Shop</a>
+        <a class="nav-cta" href="resources.html#free-library-signup">Free Checklist</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="planner-hero" aria-labelledby="planner-title">
+        <div class="planner-hero__copy">
+          <p class="eyebrow">A quiet kitchen ritual</p>
+          <h1 id="planner-title">Create a kitchen reset that fits the day you are having.</h1>
+          <p>Pour a fresh cup of coffee, choose what feels heaviest, and let Evermist shape a gentle plan for bringing the kitchen back to calm.</p>
+          <div class="proof-row" aria-label="Planner highlights">
+            <span class="proof-pill">No signup required</span>
+            <span class="proof-pill">Thoughtful, simple steps</span>
+            <span class="proof-pill">Made for real family kitchens</span>
+          </div>
+        </div>
+        <div class="planner-hero__card" aria-hidden="true">
+          <img src="assets/images/free-kitchen-reset.jpg" alt="" loading="eager">
+          <div class="planner-card-note">
+            <span class="planner-card-label">Today's reset</span>
+            <p>Start small. Finish with a kitchen that feels easier to walk into.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section planner-shell" aria-labelledby="planner-form-title">
+        <div class="planner-panel">
+          <div class="planner-progress" aria-label="Planner progress">
+            <div class="planner-progress__top">
+              <p class="eyebrow">Create your reset</p>
+              <span id="progressText">Begin with your time</span>
+            </div>
+            <div class="progress-track" aria-hidden="true">
+              <span id="progressBar"></span>
+            </div>
+          </div>
+
+          <form class="planner-form" id="plannerForm">
+            <h2 id="planner-form-title">Let's create your personalized kitchen reset.</h2>
+            <p class="planner-lede">No perfect kitchen required. Just choose what feels true right now, and leave with a simple plan you can actually finish.</p>
+            <p class="planner-soft-note">Pairs beautifully with the free Kitchen Reset Checklist when you want a printable page to keep nearby.</p>
+
+            <!-- Each fieldset is one touch-friendly planner step. JavaScript reveals one step at a time. -->
+            <fieldset class="planner-step is-active" data-step="1">
+              <legend>How much space do you have for this reset?</legend>
+              <div class="option-grid">
+                <label class="planner-option">
+                  <input type="radio" name="time" value="10" required>
+                  <span>10 minutes</span>
+                  <small>A tiny reset for a lighter room.</small>
+                </label>
+                <label class="planner-option">
+                  <input type="radio" name="time" value="20">
+                  <span>20 minutes</span>
+                  <small>A simple weekday rhythm.</small>
+                </label>
+                <label class="planner-option">
+                  <input type="radio" name="time" value="30">
+                  <span>30 minutes</span>
+                  <small>A fuller reset with breathing room.</small>
+                </label>
+                <label class="planner-option">
+                  <input type="radio" name="time" value="60">
+                  <span>60+ min</span>
+                  <small>A slow, intentional refresh.</small>
+                </label>
+              </div>
+            </fieldset>
+
+            <fieldset class="planner-step" data-step="2">
+              <legend>What part of the kitchen is asking for attention?</legend>
+              <div class="option-grid">
+                <label class="planner-option">
+                  <input type="radio" name="area" value="dishes" required>
+                  <span>Dishes</span>
+                  <small>Sink, dishwasher, drying rack.</small>
+                </label>
+                <label class="planner-option">
+                  <input type="radio" name="area" value="counters">
+                  <span>Counters</span>
+                  <small>Clutter, mail, crumbs, appliances.</small>
+                </label>
+                <label class="planner-option">
+                  <input type="radio" name="area" value="pantry">
+                  <span>Pantry</span>
+                  <small>Duplicates, snacks, staples.</small>
+                </label>
+                <label class="planner-option">
+                  <input type="radio" name="area" value="refrigerator">
+                  <span>Refrigerator</span>
+                  <small>Leftovers, produce, mystery containers.</small>
+                </label>
+                <label class="planner-option">
+                  <input type="radio" name="area" value="floors">
+                  <span>Floors</span>
+                  <small>Crumbs, spills, high-traffic spots.</small>
+                </label>
+                <label class="planner-option">
+                  <input type="radio" name="area" value="everything">
+                  <span>Everything</span>
+                  <small>When the whole kitchen feels heavy.</small>
+                </label>
+              </div>
+            </fieldset>
+
+            <fieldset class="planner-step" data-step="3">
+              <legend>Would it help to make one meal decision today?</legend>
+              <div class="option-grid option-grid--two">
+                <label class="planner-option">
+                  <input type="radio" name="mealPlanning" value="yes" required>
+                  <span>Yes</span>
+                  <small>Include one calm dinner decision.</small>
+                </label>
+                <label class="planner-option">
+                  <input type="radio" name="mealPlanning" value="no">
+                  <span>No</span>
+                  <small>Keep today focused on the room.</small>
+                </label>
+              </div>
+            </fieldset>
+
+            <fieldset class="planner-step" data-step="4">
+              <legend>What pace feels right for your home today?</legend>
+              <div class="option-grid option-grid--two">
+                <label class="planner-option">
+                  <input type="radio" name="resetType" value="quick" required>
+                  <span>Quick Reset</span>
+                  <small>Make the room feel better fast.</small>
+                </label>
+                <label class="planner-option">
+                  <input type="radio" name="resetType" value="deep">
+                  <span>Deep Reset</span>
+                  <small>Refresh the space with intention.</small>
+                </label>
+              </div>
+            </fieldset>
+
+            <div class="planner-actions">
+              <button class="button secondary" type="button" id="backButton" disabled>Back</button>
+              <button class="button primary" type="button" id="nextButton">Continue</button>
+            </div>
+            <p class="planner-hint" id="plannerHint" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+
+        <aside class="planner-side-note" aria-labelledby="why-reset-title">
+          <p class="eyebrow">Why it works</p>
+          <h2 id="why-reset-title">A calm kitchen starts with one clear next step.</h2>
+          <p>Some days need a ten-minute rescue. Some days need a slower pantry-and-fridge refresh. This planner keeps the reset realistic, warm, and doable.</p>
+          <p class="planner-quote">Less perfection. More peace in the room everyone passes through.</p>
+        </aside>
+      </section>
+
+      <section class="section result-panel" id="resultPanel" aria-labelledby="resultTitle" aria-live="polite" hidden>
+        <div class="result-header">
+          <p class="eyebrow">Your calm kitchen plan</p>
+          <h2 id="resultTitle">A reset plan for the kitchen you have today.</h2>
+          <p id="resultSummary"></p>
+          <p class="result-reassurance">Here is your gentle reset path. Start at the top, stop when the kitchen feels lighter.</p>
+        </div>
+        <ol class="result-steps" id="resultSteps"></ol>
+        <div class="result-footer">
+          <div>
+            <h3>Keep the calm going.</h3>
+            <p>Use this plan today, then grab the free Kitchen Reset Checklist so you have a beautiful reset page ready for the next busy week.</p>
+          </div>
+          <div class="result-cta-stack">
+            <a class="button primary" href="https://mykaylarider.github.io/evermistdesignsco-site/resources.html">Send Me the Free Kitchen Reset Checklist</a>
+            <p>When you are ready to bring the same calm to the rest of your home, <a href="home-command-center.html">the Home Command Center</a> is waiting.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; 2026 EvermistDesignsCo. Digital printables for home, kitchen, and family organization.</p>
+      <div class="footer-links">
+        <a href="resources.html">Free Checklist</a>
+        <a href="home-command-center.html">Home Command Center</a>
+        <a href="disclosure.html">Affiliate Disclosure</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </footer>
+
+    <script src="assets/js/main.js" defer></script>
+    <script src="assets/js/kitchen-reset-planner.js" defer></script>
+  </body>
+</html>

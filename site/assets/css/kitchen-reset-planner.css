@@ -1,0 +1,626 @@
+/* Kitchen Reset Planner styles extend the existing Evermist design tokens in styles.css. */
+:root {
+  --planner-cream: #f2ede2;
+  --planner-sage: #a7b59c;
+  --planner-olive: #6e775c;
+  --planner-taupe: #c8b7a6;
+  --planner-coffee: #5a4636;
+  --planner-blush: #d9b5a9;
+  --planner-gray: #f7f6f2;
+  --planner-shadow: 0 24px 64px rgba(90, 70, 54, 0.11);
+  --planner-soft-shadow: 0 14px 34px rgba(90, 70, 54, 0.075);
+}
+
+body {
+  background:
+    radial-gradient(circle at 12% 8%, rgba(167, 181, 156, 0.18), transparent 28%),
+    radial-gradient(circle at 82% 18%, rgba(200, 183, 166, 0.22), transparent 30%),
+    linear-gradient(180deg, #f7f3eb 0%, var(--planner-cream) 48%, #efe7dc 100%);
+}
+
+.site-header {
+  background: rgba(242, 237, 226, 0.92);
+}
+
+.planner-hero h1,
+.planner-form h2,
+.planner-side-note h2,
+.result-panel h2,
+.result-footer h3 {
+  color: var(--planner-coffee);
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 500;
+  letter-spacing: 0;
+}
+
+.planner-hero {
+  position: relative;
+  display: grid;
+  width: min(var(--max-width), calc(100% - 36px));
+  grid-template-columns: minmax(0, 1.04fr) minmax(280px, 0.7fr);
+  align-items: center;
+  gap: clamp(28px, 6vw, 72px);
+  margin: 0 auto;
+  padding: clamp(58px, 9vw, 108px) 0 clamp(34px, 5vw, 58px);
+}
+
+.planner-hero::before {
+  content: "";
+  position: absolute;
+  inset: 9% auto auto -7%;
+  width: min(28vw, 320px);
+  height: 62%;
+  background:
+    linear-gradient(90deg, rgba(90, 70, 54, 0.035) 1px, transparent 1px),
+    linear-gradient(rgba(90, 70, 54, 0.035) 1px, transparent 1px);
+  background-size: 24px 24px;
+  border-radius: 42% 58% 52% 48%;
+  z-index: -1;
+}
+
+.planner-hero__copy {
+  max-width: 780px;
+}
+
+.planner-hero__copy h1 {
+  max-width: 820px;
+  font-size: clamp(3.2rem, 7vw, 6.8rem);
+  line-height: 0.92;
+}
+
+.planner-hero__copy p {
+  max-width: 680px;
+  color: var(--planner-coffee);
+  font-size: 1.14rem;
+}
+
+.planner-hero__card {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(24px, 4vw, 36px);
+  background: rgba(255, 252, 246, 0.9);
+  border: 1px solid rgba(200, 183, 166, 0.8);
+  border-radius: 34px;
+  box-shadow: var(--planner-shadow);
+}
+
+.planner-hero__card img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: top center;
+  border-radius: 22px;
+  box-shadow: 0 18px 42px rgba(90, 70, 54, 0.09);
+}
+
+.planner-card-note {
+  position: relative;
+  width: min(88%, 340px);
+  margin: -56px auto 0;
+  padding: 18px;
+  background: rgba(255, 252, 246, 0.94);
+  border: 1px solid rgba(200, 183, 166, 0.82);
+  border-radius: 22px;
+  box-shadow: 0 18px 34px rgba(90, 70, 54, 0.12);
+}
+
+.planner-card-label {
+  display: inline-flex;
+  margin-bottom: 10px;
+  padding: 6px 10px;
+  color: var(--planner-coffee);
+  background: rgba(167, 181, 156, 0.18);
+  border: 1px solid rgba(110, 119, 92, 0.22);
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.planner-hero__card p {
+  margin: 0;
+  color: var(--planner-coffee);
+  font-weight: 700;
+}
+
+.planner-shell {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 0.38fr);
+  gap: clamp(24px, 4vw, 44px);
+  align-items: start;
+}
+
+.planner-panel,
+.planner-side-note,
+.result-panel {
+  border: 1px solid rgba(200, 183, 166, 0.58);
+  border-radius: 34px;
+  box-shadow: var(--planner-shadow);
+}
+
+.planner-panel {
+  overflow: hidden;
+  background:
+    linear-gradient(rgba(255, 252, 246, 0.94), rgba(255, 252, 246, 0.94)),
+    repeating-linear-gradient(0deg, rgba(90, 70, 54, 0.025) 0, rgba(90, 70, 54, 0.025) 1px, transparent 1px, transparent 34px);
+}
+
+.planner-progress {
+  padding: clamp(24px, 4vw, 36px) clamp(24px, 4vw, 40px) 0;
+  background: transparent;
+  border-bottom: 0;
+}
+
+.planner-progress__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 12px;
+}
+
+.planner-progress__top .eyebrow,
+.planner-progress__top span {
+  margin: 0;
+}
+
+.planner-progress__top span {
+  color: var(--planner-olive);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1rem;
+  font-style: italic;
+  font-weight: 500;
+}
+
+.progress-track {
+  overflow: hidden;
+  height: 5px;
+  background: rgba(200, 183, 166, 0.28);
+  border: 0;
+  border-radius: 999px;
+}
+
+.progress-track span {
+  display: block;
+  width: 25%;
+  height: 100%;
+  background: linear-gradient(90deg, var(--planner-olive), var(--planner-sage));
+  border-radius: inherit;
+  transition: width 260ms ease;
+}
+
+.planner-form {
+  padding: clamp(24px, 4vw, 42px) clamp(24px, 4vw, 40px) clamp(30px, 5vw, 48px);
+}
+
+.planner-form h2 {
+  max-width: 760px;
+  margin-bottom: 12px;
+  font-size: clamp(2.1rem, 4vw, 3.35rem);
+  line-height: 1;
+}
+
+.planner-lede {
+  max-width: 720px;
+  margin-bottom: 12px;
+  color: rgba(90, 70, 54, 0.82);
+  font-size: 1.06rem;
+}
+
+.planner-soft-note {
+  display: inline-flex;
+  max-width: 720px;
+  margin: 0 0 clamp(30px, 4vw, 42px);
+  padding: 12px 16px;
+  color: var(--planner-olive);
+  background: rgba(167, 181, 156, 0.14);
+  border: 1px solid rgba(110, 119, 92, 0.18);
+  border-radius: 999px;
+  font-size: 0.94rem;
+  font-weight: 700;
+}
+
+/* JavaScript toggles .is-active so only one question is visible at a time. */
+.planner-step {
+  display: none;
+  min-height: 330px;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  animation: plannerFade 260ms ease;
+}
+
+.planner-step.is-active {
+  display: block;
+}
+
+.planner-step legend {
+  margin-bottom: 22px;
+  color: var(--planner-coffee);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.42rem, 3vw, 2rem);
+  font-weight: 500;
+}
+
+.option-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.option-grid--two {
+  max-width: 760px;
+}
+
+.planner-option {
+  position: relative;
+  display: grid;
+  min-height: 128px;
+  align-content: start;
+  gap: 8px;
+  padding: 22px 22px 22px 24px;
+  cursor: pointer;
+  background: rgba(255, 252, 246, 0.58);
+  border: 1px solid rgba(200, 183, 166, 0.52);
+  border-radius: 26px;
+  transition: background 180ms ease, border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+}
+
+.planner-option::before {
+  content: "";
+  position: absolute;
+  top: 24px;
+  right: 22px;
+  width: 13px;
+  height: 13px;
+  background: transparent;
+  border: 1px solid rgba(110, 119, 92, 0.42);
+  border-radius: 50%;
+  transition: background 180ms ease, border-color 180ms ease, transform 180ms ease;
+}
+
+.planner-option:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 250, 242, 0.86);
+  box-shadow: var(--planner-soft-shadow);
+}
+
+.planner-option input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
+.planner-option span {
+  color: var(--planner-coffee);
+  max-width: calc(100% - 26px);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.24rem;
+  font-weight: 500;
+}
+
+.planner-option small {
+  color: var(--planner-olive);
+  font-size: 0.94rem;
+  font-weight: 600;
+}
+
+.planner-option:has(input:focus-visible) {
+  outline: 3px solid var(--planner-taupe);
+  outline-offset: 3px;
+}
+
+.planner-option:has(input:checked) {
+  background: rgba(167, 181, 156, 0.18);
+  border-color: rgba(110, 119, 92, 0.62);
+  box-shadow: var(--planner-soft-shadow);
+}
+
+.planner-option:has(input:checked)::before {
+  background: var(--planner-olive);
+  border-color: var(--planner-olive);
+  transform: scale(1.08);
+}
+
+.planner-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: clamp(28px, 4vw, 40px);
+  padding-top: 22px;
+  border-top: 1px solid rgba(200, 183, 166, 0.36);
+}
+
+.planner-actions .button {
+  min-width: 128px;
+  cursor: pointer;
+  font: inherit;
+}
+
+.planner-actions .button:disabled {
+  cursor: not-allowed;
+  opacity: 0.48;
+  transform: none;
+}
+
+.planner-hint {
+  min-height: 24px;
+  margin: 14px 0 0;
+  color: var(--planner-coffee);
+  font-weight: 700;
+}
+
+.planner-side-note {
+  position: sticky;
+  top: 100px;
+  padding: clamp(26px, 4vw, 36px);
+  background:
+    linear-gradient(rgba(242, 237, 226, 0.88), rgba(242, 237, 226, 0.88)),
+    repeating-linear-gradient(135deg, rgba(90, 70, 54, 0.035) 0, rgba(90, 70, 54, 0.035) 1px, transparent 1px, transparent 18px);
+}
+
+.planner-side-note h2,
+.planner-side-note p {
+  color: var(--planner-coffee);
+}
+
+.planner-side-note .eyebrow {
+  color: var(--planner-olive);
+}
+
+.planner-quote {
+  margin: 24px 0 0;
+  padding-top: 22px;
+  border-top: 1px solid rgba(90, 70, 54, 0.16);
+  color: var(--planner-olive);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.25rem;
+  font-style: italic;
+  line-height: 1.35;
+}
+
+.result-panel {
+  padding: clamp(28px, 5vw, 48px);
+  background:
+    linear-gradient(rgba(255, 252, 246, 0.95), rgba(255, 252, 246, 0.95)),
+    repeating-linear-gradient(0deg, rgba(90, 70, 54, 0.02) 0, rgba(90, 70, 54, 0.02) 1px, transparent 1px, transparent 32px);
+}
+
+.result-panel[hidden] {
+  display: none;
+}
+
+.result-header {
+  max-width: 850px;
+}
+
+.result-header p {
+  color: var(--planner-coffee);
+  font-size: 1.1rem;
+}
+
+.result-reassurance {
+  display: inline-flex;
+  margin: 12px 0 0;
+  padding: 12px 16px;
+  color: var(--planner-olive);
+  background: rgba(167, 181, 156, 0.13);
+  border: 1px solid rgba(110, 119, 92, 0.16);
+  border-radius: 999px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.03rem;
+  font-style: italic;
+}
+
+.result-steps {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  padding: 0;
+  margin: 32px 0 0;
+  list-style: none;
+  counter-reset: reset-step;
+}
+
+.result-steps li {
+  position: relative;
+  min-height: 140px;
+  padding: 26px 24px 24px;
+  background: rgba(247, 246, 242, 0.72);
+  border: 1px solid rgba(200, 183, 166, 0.52);
+  border-radius: 26px;
+  counter-increment: reset-step;
+}
+
+.result-steps li::before {
+  content: counter(reset-step, decimal-leading-zero);
+  position: absolute;
+  top: 22px;
+  right: 24px;
+  color: rgba(110, 119, 92, 0.42);
+  background: transparent;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.55rem;
+  font-weight: 500;
+}
+
+.result-steps h3 {
+  max-width: calc(100% - 48px);
+  margin-bottom: 10px;
+  color: var(--planner-coffee);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.22rem;
+  font-weight: 500;
+}
+
+.result-steps p {
+  margin: 0;
+  color: rgba(90, 70, 54, 0.82);
+  font-weight: 600;
+}
+
+.result-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin-top: 34px;
+  padding: clamp(24px, 4vw, 34px);
+  color: var(--paper);
+  background:
+    linear-gradient(135deg, rgba(90, 70, 54, 0.96), rgba(110, 119, 92, 0.94)),
+    var(--planner-coffee);
+  border-radius: 24px;
+}
+
+.result-footer h3,
+.result-footer p {
+  color: var(--paper);
+}
+
+.result-footer p {
+  max-width: 680px;
+  margin-bottom: 0;
+}
+
+.result-footer .button.primary {
+  flex: 0 0 auto;
+  color: var(--planner-coffee);
+  background: #ead9c4;
+  border-color: #ead9c4;
+}
+
+.result-cta-stack {
+  display: grid;
+  justify-items: end;
+  gap: 10px;
+  flex: 0 0 min(100%, 380px);
+}
+
+.result-cta-stack p {
+  max-width: 360px;
+  margin: 0;
+  color: rgba(248, 244, 237, 0.86);
+  font-size: 0.94rem;
+  text-align: right;
+}
+
+.result-cta-stack a:not(.button) {
+  color: #ead9c4;
+  font-weight: 800;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.planner-hero .eyebrow,
+.planner-form .eyebrow,
+.result-panel .eyebrow {
+  color: var(--planner-olive);
+}
+
+.planner-hero .proof-pill {
+  color: var(--planner-coffee);
+  background: rgba(255, 252, 246, 0.72);
+  border-color: rgba(200, 183, 166, 0.72);
+}
+
+.planner-form .button {
+  border-radius: 999px;
+}
+
+.planner-form .button.primary {
+  background: var(--planner-coffee);
+  border-color: var(--planner-coffee);
+}
+
+.planner-form .button.primary:hover {
+  color: var(--planner-coffee);
+  background: #ead9c4;
+  border-color: #ead9c4;
+}
+
+.planner-form .button.secondary {
+  color: var(--planner-coffee);
+  border-color: rgba(90, 70, 54, 0.48);
+}
+
+.result-footer .button.primary,
+.planner-hero .button,
+.result-panel .button {
+  border-radius: 999px;
+}
+
+@keyframes plannerFade {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 900px) {
+  .planner-hero,
+  .planner-shell {
+    grid-template-columns: 1fr;
+  }
+
+  .planner-side-note {
+    position: static;
+  }
+
+  .result-steps {
+    grid-template-columns: 1fr;
+  }
+
+  .result-footer {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .result-cta-stack {
+    justify-items: start;
+  }
+
+  .result-cta-stack p {
+    text-align: left;
+  }
+}
+
+@media (max-width: 560px) {
+  .planner-hero {
+    width: min(var(--max-width), calc(100% - 28px));
+  }
+
+  .option-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .planner-progress__top,
+  .planner-actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .planner-actions .button {
+    width: 100%;
+  }
+
+  .planner-step {
+    min-height: auto;
+  }
+
+  .planner-soft-note,
+  .result-reassurance {
+    align-items: flex-start;
+    border-radius: 18px;
+  }
+
+  .result-steps li {
+    padding-right: 18px;
+  }
+}
