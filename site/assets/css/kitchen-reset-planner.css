@@ -86,7 +86,7 @@ body {
 
 .planner-hero__card img {
   width: 100%;
-  aspect-ratio: 4 / 5;
+  aspect-ratio: 4 / 2.85;
   object-fit: cover;
   object-position: top center;
   border-radius: 22px;
@@ -95,13 +95,13 @@ body {
 
 .planner-card-note {
   position: relative;
-  width: min(88%, 340px);
-  margin: -56px auto 0;
+  width: 100%;
+  margin: 18px auto 0;
   padding: 18px;
   background: rgba(255, 252, 246, 0.94);
   border: 1px solid rgba(200, 183, 166, 0.82);
   border-radius: 22px;
-  box-shadow: 0 18px 34px rgba(90, 70, 54, 0.12);
+  box-shadow: 0 14px 28px rgba(90, 70, 54, 0.08);
 }
 
 .planner-card-label {
