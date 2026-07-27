@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Create a free printable chore chart in under two minutes. Choose an age range, home focus, and chart length, then print a simple kid-friendly chart and explore the Home Command Center Bundle.">
+    <title>Chore Chart Generator | EvermistDesignsCo</title>
+    <link rel="canonical" href="https://mykaylarider.github.io/evermistdesignsco-site/chore-chart-generator.html">
+    <meta property="og:title" content="Chore Chart Generator | EvermistDesignsCo">
+    <meta property="og:description" content="Build a simple printable chore chart in under two minutes. Everything stays in your browser and nothing personal is collected.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mykaylarider.github.io/evermistdesignsco-site/chore-chart-generator.html">
+    <meta property="og:image" content="https://mykaylarider.github.io/evermistdesignsco-site/assets/images/home-command-center-bundle.png">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/chore-chart-generator.css">
+    <script>
+      window.plausible = window.plausible || function() {
+        (window.plausible.q = window.plausible.q || []).push(arguments);
+      };
+    </script>
+    <script defer data-domain="mykaylarider.github.io" src="https://plausible.io/js/script.js"></script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "CreativeWork",
+        "name": "Chore Chart Generator",
+        "creator": {
+          "@type": "Organization",
+          "name": "EvermistDesignsCo"
+        },
+        "description": "A free printable chore chart generator that stays in the browser and helps families create a simple age-aware chart in under two minutes.",
+        "url": "https://mykaylarider.github.io/evermistdesignsco-site/chore-chart-generator.html",
+        "isAccessibleForFree": true
+      }
+    </script>
+  </head>
+  <body class="chore-chart-page">
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="EvermistDesignsCo home">
+        <span class="brand-mark">E</span>
+        <span>EvermistDesignsCo</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="sr-only">Toggle navigation</span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="home-command-center.html">Home Command Center</a>
+        <a href="shop.html">Shop</a>
+        <a class="nav-cta" href="resources.html#free-library-signup">Free Checklist</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="generator-hero">
+        <div class="generator-hero__copy">
+          <p class="eyebrow">Free printable tool</p>
+          <h1>Build a chore chart in under two minutes.</h1>
+          <p>Choose an age range, pick the kind of home routine you want to support, and set how long the chart should be. Everything happens in your browser, and no names or emails are collected.</p>
+          <div class="proof-row" aria-label="Chore chart trust signals">
+            <span class="proof-pill">No signup required</span>
+            <span class="proof-pill">No personal data</span>
+            <span class="proof-pill">Prints on one US Letter page</span>
+          </div>
+          <div class="button-row">
+            <a class="button primary" href="#generator-form">Start the generator</a>
+            <a class="button secondary" href="home-command-center.html">Get the Home Command Center Bundle</a>
+          </div>
+          <p class="generator-privacy-note">Use adult judgment for age and ability. This tool suggests starting points, not universal chores for every child.</p>
+        </div>
+        <div class="generator-hero__preview" aria-label="Preview of a simple chore chart">
+          <div class="preview-card">
+            <p class="preview-card__label">Sample chart</p>
+            <h2>Morning Routine</h2>
+            <ul>
+              <li>Make bed</li>
+              <li>Brush teeth</li>
+              <li>Put shoes away</li>
+              <li>Pack bag</li>
+            </ul>
+          </div>
+          <div class="preview-note">
+            <span>Simple, age-aware, and ready to print.</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section generator-panel" id="generator-form" aria-labelledby="generator-form-title">
+        <div class="section-heading">
+          <p class="eyebrow">Three quick choices</p>
+          <h2 id="generator-form-title">Answer three steps, then print your chart.</h2>
+          <p>Pick the closest fit. No text entry, no saved data, and no extra setup.</p>
+        </div>
+
+        <div class="generator-shell">
+          <form class="generator-form" id="choreChartForm">
+            <div class="generator-progress" aria-label="Generator progress">
+              <div class="generator-progress__top">
+                <p class="eyebrow">Create your chart</p>
+                <span id="progressText">Choose the age range</span>
+              </div>
+              <div class="progress-track" aria-hidden="true">
+                <span id="progressBar"></span>
+              </div>
+            </div>
+
+            <fieldset class="generator-step is-active" data-step="1">
+              <legend>What age range is this chart for?</legend>
+              <p class="step-note">Use adult judgment for ability and supervision.</p>
+              <div class="option-grid option-grid--three">
+                <label class="generator-option">
+                  <input type="radio" name="ageRange" value="3-5" required>
+                  <span>3 to 5 years</span>
+                  <small>Best for very short, adult-guided tasks.</small>
+                </label>
+                <label class="generator-option">
+                  <input type="radio" name="ageRange" value="6-8">
+                  <span>6 to 8 years</span>
+                  <small>Simple one-step chores.</small>
+                </label>
+                <label class="generator-option">
+                  <input type="radio" name="ageRange" value="9-12">
+                  <span>9 to 12 years</span>
+                  <small>Steady routines with a little more responsibility.</small>
+                </label>
+                <label class="generator-option">
+                  <input type="radio" name="ageRange" value="13-17">
+                  <span>13 to 17 years</span>
+                  <small>More independent household routines.</small>
+                </label>
+              </div>
+            </fieldset>
+
+            <fieldset class="generator-step" data-step="2">
+              <legend>What kind of home routine should it support?</legend>
+              <div class="option-grid option-grid--three">
+                <label class="generator-option">
+                  <input type="radio" name="homeFocus" value="morning" required>
+                  <span>Morning routine</span>
+                  <small>Get ready and leave the house calmly.</small>
+                </label>
+                <label class="generator-option">
+                  <input type="radio" name="homeFocus" value="after-school">
+                  <span>After-school reset</span>
+                  <small>Unpack, tidy, and settle in.</small>
+                </label>
+                <label class="generator-option">
+                  <input type="radio" name="homeFocus" value="kitchen-helper">
+                  <span>Kitchen helper</span>
+                  <small>Simple support near meals and cleanup.</small>
+                </label>
+                <label class="generator-option">
+                  <input type="radio" name="homeFocus" value="bedroom-reset">
+                  <span>Bedroom reset</span>
+                  <small>Keep the room easier to walk into.</small>
+                </label>
+                <label class="generator-option">
+                  <input type="radio" name="homeFocus" value="bathroom-helper">
+                  <span>Bathroom helper</span>
+                  <small>Light tidy-up chores for shared spaces.</small>
+                </label>
+                <label class="generator-option">
+                  <input type="radio" name="homeFocus" value="laundry-helper">
+                  <span>Laundry helper</span>
+                  <small>Sort, fold, and put away basics.</small>
+                </label>
+                <label class="generator-option">
+                  <input type="radio" name="homeFocus" value="pet-care">
+                  <span>Pet care</span>
+                  <small>Gentle tasks with adult guidance.</small>
+                </label>
+                <label class="generator-option">
+                  <input type="radio" name="homeFocus" value="weekend-reset">
+                  <span>Weekend reset</span>
+                  <small>A quick whole-home tidy.</small>
+                </label>
+                <label class="generator-option">
+                  <input type="radio" name="homeFocus" value="general-reset">
+                  <span>General family reset</span>
+                  <small>Flexible chores for any room.</small>
+                </label>
+              </div>
+            </fieldset>
+
+            <fieldset class="generator-step" data-step="3">
+              <legend>How many chores should the chart hold?</legend>
+              <div class="option-grid option-grid--three">
+                <label class="generator-option">
+                  <input type="radio" name="chartLength" value="4" required>
+                  <span>4 chores</span>
+                  <small>Quick and manageable.</small>
+                </label>
+                <label class="generator-option">
+                  <input type="radio" name="chartLength" value="6">
+                  <span>6 chores</span>
+                  <small>A balanced weekly chart.</small>
+                </label>
+                <label class="generator-option">
+                  <input type="radio" name="chartLength" value="8">
+                  <span>8 chores</span>
+                  <small>A fuller chart for older kids.</small>
+                </label>
+              </div>
+            </fieldset>
+
+            <div class="generator-actions">
+              <button class="button secondary" type="button" id="backButton" disabled>Back</button>
+              <button class="button primary" type="button" id="nextButton">Continue</button>
+            </div>
+            <p class="generator-hint" id="generatorHint" role="status" aria-live="polite"></p>
+          </form>
+
+          <aside class="generator-side-note" aria-labelledby="why-generator-title">
+            <p class="eyebrow">Why it works</p>
+            <h2 id="why-generator-title">Small choices beat complicated setup.</h2>
+            <p>This generator keeps parents moving with only three decisions, age-aware chores, and a printable result that is easy to use right away.</p>
+            <p class="generator-quote">Adult judgment matters. This tool simply gives you a clean starting point.</p>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section generator-result" id="resultPanel" aria-labelledby="resultTitle" aria-live="polite" hidden>
+        <div class="result-header">
+          <p class="eyebrow">Printable result</p>
+          <h2 id="resultTitle">Your chore chart is ready.</h2>
+          <p id="resultSummary"></p>
+          <p class="result-reassurance">Use adult judgment for each child and print only the routines that fit your home.</p>
+          <p class="result-note" id="resultNote"></p>
+        </div>
+        <div class="result-sheet">
+          <div class="result-sheet__meta">
+            <span id="chartTitle">My Chore Chart</span>
+            <span id="chartFocus"></span>
+            <span id="chartAge"></span>
+          </div>
+          <ol class="chart-grid" id="resultChores"></ol>
+        </div>
+        <div class="result-actions">
+          <button class="button primary" type="button" id="printButton">Print chart</button>
+          <a class="button secondary" href="home-command-center.html" data-analytics-label="Chore Chart Result Bundle CTA">Get the Home Command Center Bundle</a>
+        </div>
+      </section>
+
+      <section class="section generator-trust" aria-label="Why families use this tool">
+        <article>
+          <span>Simple</span>
+          <p>Three choices, one chart, no clutter.</p>
+        </article>
+        <article>
+          <span>Private</span>
+          <p>Everything stays in the browser.</p>
+        </article>
+        <article>
+          <span>Printable</span>
+          <p>Designed to print cleanly on US Letter paper.</p>
+        </article>
+        <article>
+          <span>Careful</span>
+          <p>Built to stay age-aware and adult-guided.</p>
+        </article>
+      </section>
+
+      <section class="section generator-final-cta">
+        <div>
+          <p class="eyebrow">Next step</p>
+          <h2>Want the fuller home system behind the chart?</h2>
+          <p>The Home Command Center Bundle adds schedules, chores, meals, school notes, passwords, and weekly reset pages in one printable system.</p>
+        </div>
+        <div class="button-row">
+          <a class="button primary" href="home-command-center.html" data-analytics-label="Chore Chart Final Bundle CTA">Get the Home Command Center Bundle</a>
+          <a class="button secondary" href="resources.html#free-library-signup">Browse the free library</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; 2026 EvermistDesignsCo. Digital printables for home, kitchen, and family organization.</p>
+      <div class="footer-links">
+        <a href="resources.html#free-library-signup">Free Checklist</a>
+        <a href="disclosure.html">Affiliate Disclosure</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/chore-chart-generator.js"></script>
+  </body>
+</html>

@@ -25,6 +25,10 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://mykaylarider.github.io/evermistdesignsco-site/chore-chart-generator.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://mykaylarider.github.io/evermistdesignsco-site/about.html</loc>
     <priority>0.5</priority>
   </url>

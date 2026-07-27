@@ -9,6 +9,7 @@ GitHub Pages-ready static website for EvermistDesignsCo.
 - Basic shop, resources, about, contact, and affiliate disclosure pages
 - Responsive navigation bar
 - GitHub Pages workflow in `.github/workflows/pages.yml`
+- Free Chore Chart Generator page that stays in the browser and funnels to the Home Command Center Bundle
 
 ## Local Preview
 
@@ -23,3 +24,8 @@ Open `site/index.html` in a browser.
 5. Push to the `main` branch or run the workflow manually.
 
 The workflow publishes the `site/` folder only, so private working assets and product packages outside `site/` are not deployed.
+
+## Free Tool Funnel
+
+- Homepage -> Chore Chart Generator -> Home Command Center Bundle
+- Free Resource Library -> Chore Chart Generator -> Home Command Center Bundle
