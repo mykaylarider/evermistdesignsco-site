@@ -69,9 +69,34 @@ document.addEventListener("click", (event) => {
         label,
         destination: `${url.hostname}${url.pathname}`,
       });
+
+      if (url.hostname.includes("gumroad.com")) {
+        trackAnalyticsEvent("Gumroad Product Click", {
+          label,
+          product: cleanAnalyticsHref(url.href),
+        });
+      }
     }
   } catch (_error) {
     // Ignore non-URL links such as anchors.
+  }
+});
+
+document.addEventListener("submit", (event) => {
+  const form = event.target.closest("form");
+
+  if (!form) {
+    return;
+  }
+
+  const action = form.getAttribute("action") || "";
+  const embeddedForm = form.closest(".mailer-lite-form");
+
+  if (embeddedForm || action.includes("mailerlite.com")) {
+    trackAnalyticsEvent("Email Signup Submit", {
+      form: embeddedForm?.getAttribute("aria-label") || "MailerLite form",
+      destination: cleanAnalyticsHref(action),
+    });
   }
 });
 
