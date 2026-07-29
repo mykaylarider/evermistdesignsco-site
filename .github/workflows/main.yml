@@ -1,0 +1,35 @@
+name: Evermist Website Safety Check
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check-website:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Download website files
+        uses: actions/checkout@v4
+
+      - name: Set up link checker
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Check for broken links
+        run: npx --yes linkinator ./site --recurse --skip "^(mailto:|tel:|javascript:)"
+
+      - name: Check for outdated GitHub Pages links
+        run: |
+          if grep -R "mykaylarider.github.io/evermistdesignsco-site" ./site; then
+            echo "Outdated GitHub Pages links were found. Use evermistdesigns.page instead."
+            exit 1
+          fi
+          echo "No outdated GitHub Pages links found."
