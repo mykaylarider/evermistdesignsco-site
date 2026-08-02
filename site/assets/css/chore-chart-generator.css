@@ -72,6 +72,16 @@ body.chore-chart-page {
   gap: 16px;
 }
 
+.generator-hero__image {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border: 1px solid var(--generator-line);
+  border-radius: 18px;
+  box-shadow: var(--generator-shadow);
+}
+
 .preview-card,
 .preview-note,
 .generator-side-note,
