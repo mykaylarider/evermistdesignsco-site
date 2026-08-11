@@ -13,6 +13,7 @@ const chartAge = document.querySelector("#chartAge");
 const chartFocus = document.querySelector("#chartFocus");
 const chartTitle = document.querySelector("#chartTitle");
 const printButton = document.querySelector("#printButton");
+const choreCommandCenterCta = document.querySelector("#choreCommandCenterCta");
 
 let currentStep = 0;
 
@@ -150,7 +151,12 @@ const getSelectedValue = (name) => {
 
 const trackEvent = (name, props = {}) => {
   if (typeof window.plausible === "function") {
-    window.plausible(name, { props });
+    window.plausible(name, {
+      props: {
+        page: window.location.pathname,
+        ...props,
+      },
+    });
   }
 };
 
@@ -201,12 +207,16 @@ const buildChart = () => {
   resultPanel.hidden = false;
   resultPanel.scrollIntoView({ behavior: "smooth", block: "start" });
 
-  trackEvent("Chore Chart Generated", {
+  const trackingProps = {
     ageRange,
     homeFocus,
     chartLength: actualLength,
     simplified,
-  });
+  };
+
+  // Keep the original event name for continuity, and add the clearer audit goal name.
+  trackEvent("Chore Chart Generated", trackingProps);
+  trackEvent("Chore Chart Generator Completed", trackingProps);
 };
 
 nextButton.addEventListener("click", () => {
@@ -253,6 +263,18 @@ printButton.addEventListener("click", () => {
 
   window.print();
 });
+
+if (choreCommandCenterCta) {
+  choreCommandCenterCta.addEventListener("click", () => {
+    trackEvent("Chore Chart Home Command Center CTA Click", {
+      label: "Chore Chart Home Command Center CTA",
+      href: choreCommandCenterCta.getAttribute("href") || "",
+      ageRange: getSelectedValue("ageRange"),
+      homeFocus: getSelectedValue("homeFocus"),
+      chartLength: getSelectedValue("chartLength"),
+    });
+  });
+}
 
 trackEvent("Chore Chart Generator Viewed");
 updateProgress();

@@ -443,6 +443,38 @@ body.chore-chart-page {
   border-top: 1px solid rgba(36, 52, 47, 0.08);
 }
 
+.result-next-step {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 18px;
+  padding: clamp(20px, 4vw, 28px);
+  background: #24342f;
+  border-radius: 18px;
+}
+
+.result-next-step h3 {
+  margin-bottom: 8px;
+  color: #f8f2e9;
+  font-size: clamp(1.35rem, 3vw, 1.8rem);
+}
+
+.result-next-step p {
+  color: rgba(248, 242, 233, 0.9);
+}
+
+.result-next-step .eyebrow {
+  color: #dfbf79;
+}
+
+.result-next-step .button.primary {
+  flex: 0 0 auto;
+  color: var(--generator-ink);
+  background: #dfbf79;
+  border-color: #dfbf79;
+}
+
 .generator-trust {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -494,6 +526,11 @@ body.chore-chart-page {
   .generator-shell,
   .generator-final-cta {
     grid-template-columns: 1fr;
+  }
+
+  .result-next-step {
+    align-items: flex-start;
+    flex-direction: column;
   }
 
   .generator-trust {

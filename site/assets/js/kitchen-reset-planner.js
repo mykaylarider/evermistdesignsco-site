@@ -8,6 +8,7 @@ const plannerHint = document.querySelector("#plannerHint");
 const resultPanel = document.querySelector("#resultPanel");
 const resultSummary = document.querySelector("#resultSummary");
 const resultSteps = document.querySelector("#resultSteps");
+const kitchenPlannerNextStepCta = document.querySelector("#kitchenPlannerNextStepCta");
 
 let currentStep = 0;
 
@@ -141,6 +142,19 @@ const getSelectedValue = (name) => {
   return selected ? selected.value : "";
 };
 
+const trackPlannerEvent = (name, props = {}) => {
+  if (typeof window.plausible !== "function") {
+    return;
+  }
+
+  window.plausible(name, {
+    props: {
+      page: window.location.pathname,
+      ...props,
+    },
+  });
+};
+
 const updateProgress = () => {
   const stepNumber = currentStep + 1;
   progressText.textContent = progressLabels[currentStep];
@@ -191,17 +205,16 @@ const buildPlan = () => {
   resultPanel.hidden = false;
   resultPanel.scrollIntoView({ behavior: "smooth", block: "start" });
 
-  // Track completed planner sessions when Plausible is available.
-  if (typeof window.plausible === "function") {
-    window.plausible("Kitchen Reset Plan Generated", {
-      props: {
-        time,
-        area,
-        mealPlanning,
-        resetType,
-      },
-    });
-  }
+  const trackingProps = {
+    time,
+    area,
+    mealPlanning,
+    resetType,
+  };
+
+  // Keep the original event name for continuity, and add the clearer audit goal name.
+  trackPlannerEvent("Kitchen Reset Plan Generated", trackingProps);
+  trackPlannerEvent("Kitchen Reset Planner Completed", trackingProps);
 };
 
 nextButton.addEventListener("click", () => {
@@ -231,5 +244,18 @@ backButton.addEventListener("click", () => {
 plannerForm.addEventListener("change", () => {
   plannerHint.textContent = "";
 });
+
+if (kitchenPlannerNextStepCta) {
+  kitchenPlannerNextStepCta.addEventListener("click", () => {
+    trackPlannerEvent("Kitchen Planner Next Step CTA Click", {
+      label: "Kitchen Planner Free Checklist CTA",
+      href: kitchenPlannerNextStepCta.getAttribute("href") || "",
+      time: getSelectedValue("time"),
+      area: getSelectedValue("area"),
+      mealPlanning: getSelectedValue("mealPlanning"),
+      resetType: getSelectedValue("resetType"),
+    });
+  });
+}
 
 updateProgress();

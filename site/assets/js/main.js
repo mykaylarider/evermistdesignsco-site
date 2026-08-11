@@ -44,8 +44,16 @@ document.addEventListener("click", (event) => {
   const rawHref = link.getAttribute("href") || "";
   const href = cleanAnalyticsHref(rawHref);
   const label = (link.dataset.analyticsLabel || link.textContent || "").trim().replace(/\s+/g, " ");
+  const customEventName = link.dataset.analyticsEvent || "";
   const isTrackedButton = link.matches(".button, .text-link, .link-panel a, .site-nav a");
   const isDownload = link.hasAttribute("download") || /\.(pdf|zip|csv|xlsx|docx)(?:$|[?#])/i.test(rawHref);
+
+  if (customEventName) {
+    trackAnalyticsEvent(customEventName, {
+      label,
+      href,
+    });
+  }
 
   if (isTrackedButton) {
     trackAnalyticsEvent("Button Click", {
